@@ -10,7 +10,24 @@ const createImovel = async (req, res) => {
     return res.status(201).json(createdImovel);
 };
 
+const deleteImovel = async (req, res) => {
+    const {id} = req.params;
+
+    await imoveisModel.deleteImovel(id);
+    return res.status(204).json();
+};
+
+const updateImovel = async (req, res) => {
+    const {id} = req.params;
+
+    await imoveisModel.updateImovel(id, req.body);
+    return res.status(204).json(); 
+};
+
+
 module.exports = {
     getAll,
     createImovel,
+    deleteImovel,
+    updateImovel,
 };

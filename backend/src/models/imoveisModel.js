@@ -20,7 +20,23 @@ const createImovel = async (imovel) => {
   
 };
 
+const deleteImovel = async (id) => {
+    const [removeImovel] = await connection.execute('DELETE FROM imoveis WHERE id = ?', [id]);
+    return removeImovel;
+};
+
+const updateImovel = async (id, imovel) => {
+  const {title, bairro, status} = imovel;
+  
+  const query = 'UPDATE imoveis SET title = ?, bairro = ?, status = ? WHERE id = ?';
+
+  const [updateImovel] = await connection.execute(query, [title, bairro, status, id]);
+  return updateImovel;
+};
+
 module.exports = {
   getAll,
   createImovel,
+  deleteImovel,
+  updateImovel,
 };
