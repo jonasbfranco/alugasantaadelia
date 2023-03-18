@@ -8,7 +8,7 @@ const imoveisMiddleware = require('./middlewares/imoveisMiddleware');
 router.get('/', (req, res) => {
     const teste = [
         {
-            "status": "App funcionando 2",
+            "status": "App funcionando com volumes na porta 3306",
         }
     ];
     return res.status(200).json(teste);
