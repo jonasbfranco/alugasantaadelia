@@ -20,7 +20,7 @@ services:
       - '3306'
     volumes:
       # - data:/var/lib/mysql:rw
-      - '$PWD/data:/var/lib/mysql'
+      # - '$PWD/data:/var/lib/mysql'
       - "./create-db-template.sql:/docker-entrypoint-initdb.d/1.sql"
     # user: mysql
   adminer:

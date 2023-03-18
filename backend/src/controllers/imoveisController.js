@@ -21,6 +21,7 @@ const updateImovel = async (req, res) => {
     const {id} = req.params;
 
     await imoveisModel.updateImovel(id, req.body);
+    const log = console.log(req.body);
     return res.status(204).json(); 
 };
 

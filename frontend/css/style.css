@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: #0099FF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+    background-color: #FFF;
+    border-radius: 0.8rem;
+    padding: 2rem;
+    margin: 4rem auto;
+    width: 90%;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+
+.add-form {
+    display: flex;
+    margin-bottom: 5rem;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    flex: 1;
+    padding: 1.5rem;
+    border: 0.1rem solid #DDD;
+    border-radius: 0.5rem;
+    outline: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+button[type="submit"] {
+    background-color: #0099FF;
+    height: 5rem;
+    width: 5rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: #FFF;
+    font-size: 1.7rem;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 1rem 1.5rem;
+    border: 0.1rem solid #DDD;
+    text-align: center;
+}
+
+td {
+    color: #333;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #F5F5F5;
+}
+
+select {
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    background-color: #EBEBEB;
+}
+
+select:hover {
+    background-color: #DDD;
+}
+
+.btn-action {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color: #FFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn-action:nth-child(1) {
+    background-color: orange;
+    margin-right: 0.5rem;
+}
+
+.btn-action:nth-child(2) {
+    background-color: rgba(237, 42, 42, 0.9);
+}

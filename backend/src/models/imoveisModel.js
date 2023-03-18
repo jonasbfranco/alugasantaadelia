@@ -26,11 +26,14 @@ const deleteImovel = async (id) => {
 };
 
 const updateImovel = async (id, imovel) => {
-  const {title, bairro, status} = imovel;
-  
-  const query = 'UPDATE imoveis SET title = ?, bairro = ?, status = ? WHERE id = ?';
+  const {title, bairro, status, created_at, updated_at} = imovel;
 
-  const [updateImovel] = await connection.execute(query, [title, bairro, status, id]);
+  //Gerando a Data em UTC
+  const dateUTC = new Date(Date.now()).toUTCString();
+  
+  const query = 'UPDATE imoveis SET title = ?, bairro = ?, status = ?, created_at = ?, updated_at = ? WHERE id = ?';
+
+  const [updateImovel] = await connection.execute(query, [title, bairro, status, created_at, updated_at, id]);
   return updateImovel;
 };
 
