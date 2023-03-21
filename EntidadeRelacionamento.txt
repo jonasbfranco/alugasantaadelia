@@ -1,0 +1,22 @@
+Table: user
+id_user
+nome_user
+senha_user
+whatss_user
+situacao_user
+created_at_user
+updated_at_user
+
+Table: imovel
+id_imovel
+id_user
+title_imove
+endereco_imovel
+numero_imovel
+bairro_imovel
+quartos_imovel
+piscina_imovel
+garagem_imovel
+situacao_imovel
+created_at_imovel
+updated_at_imovel
