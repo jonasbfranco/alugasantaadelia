@@ -20,15 +20,22 @@ services:
       - '3306'
     volumes:
       # - data:/var/lib/mysql:rw
-      # - '$PWD/data:/var/lib/mysql'
+      - '$PWD/data:/var/lib/mysql:rw'
       - "./create-db-template.sql:/docker-entrypoint-initdb.d/1.sql"
     # user: mysql
-  adminer:
-    image: adminer
-    container_name: adminer
-    restart: unless-stopped
+  # adminer:
+  #   image: adminer
+  #   container_name: adminer
+  #   restart: unless-stopped
+  #   ports:
+  #   - 8088:8080
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
     ports:
-    - 8088:8080
+      - 8088:80
+    environment:
+      - PMA_ARBITRARY=1
   app:
     build: .
     restart: unless-stopped
