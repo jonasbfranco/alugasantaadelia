@@ -33,7 +33,16 @@ services:
     image: phpmyadmin
     restart: always
     ports:
+<<<<<<< Updated upstream
       - 8088:80
+=======
+    - 8088:8080
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8089:80
+>>>>>>> Stashed changes
     environment:
       - PMA_ARBITRARY=1
   app:
