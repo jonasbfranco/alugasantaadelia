@@ -25,10 +25,18 @@ const updateImovel = async (req, res) => {
     return res.status(204).json(); 
 };
 
+const searchImovel = async (req, res) => {
+    const {id} = req.params;
+
+    const imoveis = await imoveisModel.searchImovel(id, req.body);
+    return res.status(200).json(imoveis);
+};
+
 
 module.exports = {
     getAll,
     createImovel,
     deleteImovel,
     updateImovel,
+    searchImovel,
 };

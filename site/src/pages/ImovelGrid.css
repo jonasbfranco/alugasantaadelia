@@ -19,26 +19,25 @@
 }
 
 .imoveis-container div {
-    width: 30%;
+    /* width: 30%; */
     color: #121212;
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: #cecece;
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
     border-radius: 8px;
 }
-
-/* .imoveis-container .text {
-    align-items: start;
-    width: 100%;
-    padding: .5rem 1.1rem;
-} */
 
 .imoveis-container div img {
     max-width: 100%;
     border-radius: 8px;
+}
+
+.imoveis-container .text {
+    width: 100%;
+    padding: 0.5rem 0 0 0;
 }
 
 .imoveis-container div img,

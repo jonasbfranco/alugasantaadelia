@@ -37,9 +37,15 @@ const updateImovel = async (id, imovel) => {
   return updateImovel;
 };
 
+const searchImovel = async (title) => {
+  const [searchImoveis] = await connection.execute(`SELECT * FROM imoveis WHERE id LIKE = 1 `, [title]);
+  return searchImoveis;
+}
+
 module.exports = {
   getAll,
   createImovel,
   deleteImovel,
   updateImovel,
+  searchImovel,
 };

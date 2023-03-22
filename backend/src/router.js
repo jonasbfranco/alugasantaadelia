@@ -21,5 +21,7 @@ router.put('/imoveis/:id',
             imoveisMiddleware.validateFieldsPost, 
             imoveisMiddleware.validateFieldsPut, 
             imoveisController.updateImovel);
+router.get('/imoveis/:id', imoveisController.searchImovel);
+
 
 module.exports = router;
