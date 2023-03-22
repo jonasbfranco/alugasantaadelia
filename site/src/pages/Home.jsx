@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import ImovelCard from '../components/ImovelCard';
+
+import './ImovelGrid.css';
 
 const imoveisURL = 'http://localhost:3333/imoveis'
 
@@ -26,11 +29,11 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="conatiner">
+        <div className="container">
             <h2 className="title">Casas para Alugar</h2>
             <div className="imoveis-container">
                 {imoveis.length === 0 && <p>Carregando...</p>}
-                {imoveis.length > 0 && imoveis.map((imovel) => <p>{imovel.title}</p>)}
+                {imoveis.length > 0 && imoveis.map((imovel) => <ImovelCard key={imovel.id} imovel={imovel} />)}
             </div>
         </div>
     )
