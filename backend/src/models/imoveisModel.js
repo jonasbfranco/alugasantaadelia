@@ -38,9 +38,17 @@ const updateImovel = async (id, imovel) => {
 };
 
 const searchImovel = async (title) => {
-  const [searchImoveis] = await connection.execute(`SELECT * FROM imoveis WHERE id LIKE = 1 `, [title]);
+  const titlequery = '%'+title+'%';
+  const [searchImoveis] = await connection.execute('SELECT * FROM imoveis WHERE title LIKE ?', [titlequery]);
   return searchImoveis;
+  // return titlequery;
 }
+
+const searchOneImovel = async (id) => {
+  const [searchOneImoveis] = await connection.execute('SELECT * FROM imoveis WHERE id = ?', [id]);
+  return searchOneImoveis;
+}
+
 
 module.exports = {
   getAll,
@@ -48,4 +56,5 @@ module.exports = {
   deleteImovel,
   updateImovel,
   searchImovel,
+  searchOneImovel,
 };

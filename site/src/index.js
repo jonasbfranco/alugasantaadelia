@@ -18,7 +18,7 @@ root.render(
       <Routes>
         <Route element={<App />}>
           <Route path='/' element={<Home />} />
-          <Route path='/imovel/:id' element={<Imovel />} />
+          <Route path='/detalhes/:id' element={<Imovel />} />
           <Route path='/search' element={<Search />} />
         </Route>
       </Routes>

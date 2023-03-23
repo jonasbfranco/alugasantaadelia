@@ -26,12 +26,18 @@ const updateImovel = async (req, res) => {
 };
 
 const searchImovel = async (req, res) => {
-    const {id} = req.params;
+    const {title} = req.params;
 
-    const imoveis = await imoveisModel.searchImovel(id, req.body);
+    const imoveis = await imoveisModel.searchImovel(title);
     return res.status(200).json(imoveis);
 };
 
+const searchOneImovel = async (req, res) => {
+    const {id} = req.params;
+
+    const imoveis = await imoveisModel.searchOneImovel(id);
+    return res.status(200).json(imoveis); 
+};
 
 module.exports = {
     getAll,
@@ -39,4 +45,5 @@ module.exports = {
     deleteImovel,
     updateImovel,
     searchImovel,
+    searchOneImovel,
 };

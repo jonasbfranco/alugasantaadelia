@@ -4,7 +4,7 @@ import ImovelCard from '../components/ImovelCard'
 
 import './ImovelGrid.css';
 
-const searchURL = '';
+const searchURL = 'http://localhost:3333/imoveis/';
 
 
 const Search = () => {
@@ -12,6 +12,7 @@ const Search = () => {
 
   const [imoveis, setImoveis] = useState([]);
   const query = searchParams.get('q');
+  // console.log(query);
 
   const getSearchedImoveis = async (url) => {
     const res = await fetch(url);
@@ -20,15 +21,16 @@ const Search = () => {
     // console.log(data);
     setImoveis(data);
     // console.log(setImoveis);
+
   };
 
   useEffect(() => {
-      const serachWithQueryUrl = imoveisURL;
+      const searchWithQueryUrl = searchURL+query;
 
-      // console.log(serachWithQueryUrl);
+      // console.log(searchWithQueryUrl);
 
-      getSearchedImoveis(serachWithQueryUrl);
-  }, []);
+      getSearchedImoveis(searchWithQueryUrl);
+  }, [query]);
 
   return (
     <div className="container">

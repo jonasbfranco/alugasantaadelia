@@ -13,7 +13,7 @@ const ImovelCard = ({ imovel, showLink = true }) => {
           <p>
               <FaHeart /> <span>Favoritos</span>
           </p>
-          {showLink && <Link to={`imovel/${imovel.id}`}>Detalhes</Link>}
+          {showLink && <Link to={`detalhes/${imovel.id}`}>Detalhes</Link>}
           </div>
     </div>
   )
