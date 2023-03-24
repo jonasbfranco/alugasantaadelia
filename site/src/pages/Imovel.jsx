@@ -37,39 +37,54 @@ const Imovel = () => {
       {imovel &&  (
       <>
         <ImovelCard imovel={imovel} showLink={false} />
-        <h3 className='bairro'>
-          <BsWallet /> Endereço: 
-          {imovel[0].endereco_imovel}
-        </h3>
-
-        <h3 className='bairro'>
-          <BsWallet /> Nº:
-          {imovel[0].numero_imovel}
-        </h3>
-        <h3 className='bairro'>
-          <BsWallet /> Qtde quartos:
-          {imovel[0].qtdquartos_imovel}
-        </h3>
-        <h3 className='bairro'>
-          <BsWallet /> Possui piscina?:
-          {imovel[0].piscina_imovel}
-        </h3>
-        <h3 className='bairro'>
-          <BsWallet /> Possui garagem?:
-          {imovel[0].garagem_imovel}
-        </h3>
-        <h3 className='bairro'>
-          <BsWallet /> Qtde carros na garagem?:
-          {imovel[0].qtdcarros_imovel}
-        </h3>
-        <h3 className='bairro'>
-          <BsWallet /> Possui aréa de lazer?:
-          {imovel[0].areadelazer_imovel}
-        </h3>
-        <h3 className='bairro'>
-          <BsWallet /> Observações:
-          {imovel[0].observacoes_imovel}
-        </h3> 
+        <div>
+          <h3 className='bairro'>
+            <BsWallet /> Endereço: 
+          </h3>
+          <p>{imovel[0].endereco_imovel}</p>
+        </div>
+        <div>
+          <h3 className='bairro'>
+            <BsWallet /> Nº:
+          </h3>
+          <p>{imovel[0].numero_imovel}</p>
+        </div>
+        <div>
+          <h3 className='bairro'>
+            <BsWallet /> Qtde quartos:
+          </h3>
+          <p>{imovel[0].qtdquartos_imovel}</p>
+        </div>
+        <div>
+          <h3 className='bairro'>
+            <BsWallet /> Possui piscina?:
+          </h3>
+          <p>{imovel[0].piscina_imovel}</p>
+        </div>
+        <div>
+          <h3 className='bairro'>
+            <BsWallet /> Possui garagem?:
+          </h3>
+          <p>{imovel[0].garagem_imovel}</p>
+        </div>
+        <div>
+          <h3 className='bairro'>
+            <BsWallet /> Qtde carros na garagem?:
+          </h3>
+          <p>{imovel[0].qtdcarros_imovel}</p>
+        </div>
+        <div>
+          <h3 className='bairro'>
+            <BsWallet /> Possui aréa de lazer?:
+          </h3>
+          <p>{imovel[0].area_de_lazer_imovel}</p>
+        </div>
+        <div>
+          <h3 className='bairro'>
+            <BsWallet /> Observações:
+          </h3>
+          <p>{imovel[0].observacoes_imovel}</p>
+        </div> 
       </>
     )}
     </div>

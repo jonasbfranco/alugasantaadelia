@@ -23,7 +23,7 @@ ADD
 ADD
     COLUMN qtdquartos_imovel integer(1) DEFAULT '1' COMMENT '',
 ADD
-    COLUMN priscina_imovel varchar(3) DEFAULT 'NAO' COMMENT '',
+    COLUMN piscina_imovel varchar(3) DEFAULT 'NAO' COMMENT '',
 ADD
     COLUMN garagem_imovel varchar(3) DEFAULT 'SIM' COMMENT '',
 ADD
