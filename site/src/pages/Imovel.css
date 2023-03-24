@@ -1,0 +1,65 @@
+.imovel-page {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.imovel-page svg {
+    font-size: 1.5rem;
+    color: #f7d354
+}
+
+.imovel-page .imovel-card {
+    text-align: center;
+}
+
+.imovel-page .imovel-card img,
+.imovel-page .imovel-card h3,
+.imovel-page .img-card p {
+    margin-bottom: 1rem;
+}
+
+.imovel-page .imovel-card h3 {
+    font-size: 1rem;
+}
+
+.imovel-page .imovel-card p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.tag-line {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.info {
+    margin-bottom: 1rem;
+}
+
+.info h3 {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.info p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.description {
+    padding-bottom: 10rem;
+}
+
+.description p {
+    line-height: 1.4rem;
+}
